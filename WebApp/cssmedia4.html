@@ -1,0 +1,58 @@
+<style>
+    *
+    {
+        box-sizing: border-box;
+    }
+    .column
+    {
+        float: left;
+        width:25%;
+        padding: 20px;
+    }
+    .row:after
+    {
+        content: "";
+        display: table;
+        clear:both;
+    }
+    @media screen and (max-width:600px)
+    {
+        .column
+        {
+            width: 50%;
+        }
+    }
+    @media screen and (max-width:400px)
+     {
+        .column
+        {
+            width: 100%;
+        }    
+    }
+</style>
+<div class="row">
+   <div class="column" style="background-color: #aaa;">
+    <h2>Column 1</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    <div class="column" style="background-color: #bbb;">
+     <h2>Column 2</h2>
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+         et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+         nisi ut aliquip ex ea commodo consequat.</p>
+         </div>
+         <div class="column" style="background-color: #bbb;">
+            <h2>Column 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="column" style="background-color: #bbb;">
+                    <h2>Column 3</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+ </div>
