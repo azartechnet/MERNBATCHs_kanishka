@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Image Gallery with Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #f1f1f1;
+            width: 100%;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            margin: 0 10px;
+        }
+
+        .navbar a {
+            display: flex;
+            align-items: center;
+            color: rebeccapurple;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a img {
+            margin-right: 8px;
+        }
+
+        .navbar a:hover:not(.active) {
+            background-color: #04AA6D;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            margin: 10px;
+            text-align: center;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            border-color: #04AA6D;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 14px;
+            color: #fff;
+            background-color: #04AA6D;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #039a5a;
+        }
+
+        .btn-view {
+            background-color: #2196F3;
+        }
+
+        .btn-view:hover {
+            background-color: #1976D2;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a class="active" href="#home"><img src="images/homeicon.png" alt="Home" width="20px" height="20px">Home</a></li>
+            <li><a href="#news"><img src="images/newsicons.png" alt="News" width="20px" height="20px">News</a></li>
+            <li><a href="#contact"><img src="images/icons8-contact-50.png" alt="Contact" width="20px" height="20px">Contact</a></li>
+            <li><a href="#about"><img src="images/icons8-about-50.png" alt="About" width="20px" height="20px">Login</a></li>
+        </ul>
+    </div>
+    <center>
+        <h1>LoginForm</h1>
+        
+    </center>
+        <center>
+            <h3>
+                @CopyRight2024
+            </h3>
+        </center>
+    </div>
+</body>
+</html>
