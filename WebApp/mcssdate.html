@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Import jQuery and Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+
+  <input type="text" class="datepicker">
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.datepicker');
+      var options = {}; // Define your options here if needed
+      var instances = M.Datepicker.init(elems, options);
+    });
+
+    // Or with jQuery
+    $(document).ready(function(){
+      $('.datepicker').datepicker();
+    });
+  </script>
+</body>
+</html>
