@@ -1,0 +1,22 @@
+<script>
+    var age=parseInt(prompt("Enter the age is::"))
+    if(age>=61)
+    {
+        document.write("You are eligible for Senior Citizen Discount")
+        var sal=parseInt(prompt("Enter the sal is::"))
+        if(sal>=20000)
+        {
+            bns=sal+500
+            document.write("Your Bonus is::"+bns)
+        }
+        else
+        {
+            bns=sal+1000;
+            document.write("Your Bonus is::"+bns)
+        }
+    }
+    else
+    {
+        document.write("Age is low")
+    }
+</script>
