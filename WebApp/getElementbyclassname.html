@@ -1,0 +1,12 @@
+<div class="example">FirstElement</div>
+<div class="example">SecondElement</div>    
+<div class="example">ThirdElement</div>
+
+<script>
+    var elm=document.getElementsByClassName('example');
+    for(var i=0;i<elm.length;i++)
+    {
+        elm[i].style.background='red';
+        console.log(elm[i].textContent)
+    }
+</script>

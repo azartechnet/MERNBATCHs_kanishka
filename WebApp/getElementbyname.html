@@ -1,0 +1,16 @@
+<form id="myform">
+   <input type="text" name="username" value="azar">
+   <input type="text" name="password" value="azar@123">
+   <input type="submit" value="Submit"/>
+</form>
+<script>
+    var usernameElement=document.getElementsByName("username");
+    var passwordElement=document.getElementsByName("password");
+    for(var i=0;i<usernameElement.length;i++)
+    {
+        
+        console.log(usernameElement[i].value)
+        console.log(passwordElement[i].value)
+    }
+   
+</script>
