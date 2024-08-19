@@ -1,0 +1,25 @@
+<!-- filter -->
+<!-- <p id="d1"></p>
+<script>
+    const num=[10,20,30,40,50]
+    const filterNum=num.filter((value,index)=>value>30)
+    document.getElementById("d1").innerHTML=filterNum;
+</script> -->
+<!--reduce-->
+<!-- <p id="d2"></p>
+<script>
+    const num1=[10,20,30,40,50]
+    const reduceNum=num1.reduce((acc,cur)=>acc+cur,0)
+    document.getElementById("d2").innerHTML=reduceNum;
+</script> -->
+<!--reduceRight-->
+<p id="d3"></p>
+<script>
+    const num2=[10,20,30,40,50]
+    let sum=num2.reduceRight(myfun)
+    document.getElementById("d3").innerHTML="The Sum is::"+sum;
+    function myfun(total,value)
+    {
+        return total+value
+    }
+</script>
