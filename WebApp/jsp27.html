@@ -13,7 +13,7 @@
     document.getElementById("d2").innerHTML=reduceNum;
 </script> -->
 <!--reduceRight-->
-<p id="d3"></p>
+<!-- <p id="d3"></p>
 <script>
     const num2=[10,20,30,40,50]
     let sum=num2.reduceRight(myfun)
@@ -22,4 +22,18 @@
     {
         return total+value
     }
+</script> -->
+<!--Entries-->
+<p id="d4"></p>
+<script>
+    const num3=["a1","a2","a3","a4","a5"]
+    // const f=num3.entries()
+    // const f=num3.keys()
+    const f=num3.values();
+
+    for(let x of f)
+    {
+        document.getElementById("d4").innerHTML+=x;
+    }
+
 </script>
