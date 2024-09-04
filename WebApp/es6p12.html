@@ -1,0 +1,12 @@
+<h2 id="d1"></h2>
+<h2 id="d2"></h2>
+<script>
+    const empname=new Set();
+    empname.add("azar")
+    empname.add("banu")
+    empname.add("cat")
+
+    document.getElementById("d1").innerHTML=empname.size
+    // Display all entries of the set
+    document.getElementById("d2").innerHTML = Array.from(empname).join(", ");
+</script>

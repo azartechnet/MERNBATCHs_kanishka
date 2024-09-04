@@ -1,0 +1,8 @@
+<script>
+    const mypromise=new Promise(function(myResolve,myReject){
+        setTimeout(function(){myResolve("Welcome")},3000)
+    })
+    mypromise.then(function(value){
+        console.log(value)
+    })
+</script>

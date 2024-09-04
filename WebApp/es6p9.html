@@ -1,0 +1,18 @@
+<h3>Your value is::</h3>
+<h4 id="d1"></h4>
+<h4 id="d2"></h4>
+<script>
+    class empname{
+        constructor(name,year)
+        {
+            this.name=name;
+            this.year=year;
+        }
+
+    }
+    const my1=new empname("mohamed",1998);
+    const my2=new empname("azar",2013);
+
+    document.getElementById("d1").innerHTML=my1.name+""+my1.year;
+    document.getElementById("d2").innerHTML=my2.name+""+my2.year;
+</script>
