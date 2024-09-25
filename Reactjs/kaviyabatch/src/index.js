@@ -167,7 +167,7 @@ r1.render(<Greeting user="azar" age="23"/>)*/
 
 //Components  in Components 
 
-function Component1()
+/*function Component1()
 {
   return(
     <div>
@@ -186,4 +186,90 @@ function Component2()
 }
 
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Component2/>)
+r1.render(<Component2/>)*/
+
+//Constructor using super
+
+/*class Sample extends React.Component
+{
+  constructor()
+  {
+    super();
+    this.state={name:"mohamed",age:34};
+  }
+  render()
+  {
+    return(
+      <>
+        <h1>UserName::{this.state.name}</h1>
+        <h2>Age is::{this.state.age}</h2>
+      </>
+    )
+  }
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample/>)*/
+
+//constructor using props
+
+/*class Sample extends React.Component
+{
+  constructor(props)
+  {
+    super(props);
+    this.state={f1:'green'}
+  }
+  render()
+  {
+    return(
+      <div>
+        <h2 style={{background:this.state.f1}}>Welcome</h2>
+      </div>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample/>)*/
+
+/*class Sample extends React.Component {
+  render() {
+    return <h2>I am a {this.props.c1} Sample!</h2>;
+  }
+}
+
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
+root.render(<Sample c1="red"/>);*/
+
+//React State
+
+class Sample extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      brand: "Ford",
+      model: "Mustang",
+      color: "red",
+      year: 1964
+    };
+  }
+  render() {
+    return (
+      <div>
+        <h1>My {this.state.brand}</h1>
+        <p>
+          It is a {this.state.color}
+          {this.state.model}
+          from {this.state.year}.
+        </p>
+      </div>
+    );
+  }
+}
+
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
+root.render(<Sample />);
+
+
