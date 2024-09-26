@@ -244,7 +244,7 @@ root.render(<Sample c1="red"/>);*/
 
 //React State
 
-class Sample extends React.Component {
+/*class Sample extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -270,6 +270,90 @@ class Sample extends React.Component {
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
-root.render(<Sample />);
+root.render(<Sample />);*/
 
+//changing the state object
+/*class Sample extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      brand: "Ford",
+      model: "Mustang",
+      color: "red",
+      year: 1964
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState({
+      brand: "Toyota",
+      model: "Camry",
+      color: "blue",
+      year: 2015
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>My {this.state.brand}</h1>
+        <p>
+          It is a {this.state.color} {this.state.model} from {this.state.year}
+        </p>
+        <button onClick={this.handleClick}>Change Car</button>
+      </div>
+    );
+  }
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample/>)*/
+
+//Changing the state object
+
+class Sample extends React.Component
+{
+  constructor(props)
+  {
+     super(props);
+     this.state = {
+       emp:{
+          id:1002,
+          name:"azar",
+          city:"Lahore"
+       },
+       showData:false
+  };
+}
+showdata(){
+  this.setState({showData:true });
+}
+ hideData(){
+   this.setState({showData:false});
+ }
+  render()
+   {
+     let data ;
+      if (this.state.showData== true) 
+      {
+         data= <div><b>City :</b>{this.state.emp.city}<b>Id::</b>{this.state.emp.id}<br/>
+           <button onClick={this.hideData.bind(this)} >Hide Data</button></div>;
+      }
+      else
+       {
+         data= <button onClick={this.showdata.bind(this)} >Show Data</button>;
+          }
+            return (
+               <div>
+                <h1>Employee Details </h1>
+                 {data}
+              </div>
+              );
+               }
+};
+//ReactDOM.render(<Sample /> ,document.getElementById('root'));
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample /> )
 
