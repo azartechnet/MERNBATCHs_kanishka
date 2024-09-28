@@ -312,7 +312,7 @@ r1.render(<Sample/>)*/
 
 //Changing the state object
 
-class Sample extends React.Component
+/*class Sample extends React.Component
 {
   constructor(props)
   {
@@ -355,5 +355,83 @@ showdata(){
 //ReactDOM.render(<Sample /> ,document.getElementById('root'));
 
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Sample /> )
+r1.render(<Sample /> )*/
 
+//React Event
+
+/*function Football()
+{
+   const shoot=()=>{
+  
+      alert("Goal  Scored");
+    
+   }
+   return (
+    <div>
+      <button onClick={shoot}>Shoot</button>
+    </div>
+   )
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Football/>)*/
+
+/*function Football()
+{
+  const shoot=(a)=>{
+    alert("Goal Scored By "+a);
+  }
+  return (
+    <div>
+      <button onClick={()=>shoot("Messi")}>Shoot</button>
+    </div>
+  )
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Football/>)*/
+
+//Conditional Rendering
+
+/*function MissedGoal()
+{
+   return<h1>Missed</h1>
+}
+function MadeGoal()
+{
+   return<h1>Goal</h1>
+}
+function Goal(props)
+{
+  const isGoal=props.isGoal;
+  if(isGoal)
+  {
+    return<MadeGoal/>
+  }
+  else
+  {
+    return<MissedGoal/>
+  }
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Goal isGoal={Math.random()>0.5}/>)*/
+
+//React List using Map
+
+function Car(props)
+{
+  return<li>I am {props.b1}</li>
+}
+function Garage()
+{
+   const cars=["BMW","Audi","Toyota"];
+   return(
+    <ul>
+      {cars.map((car)=><Car b1={car}/>)}
+
+    </ul>
+   )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Garage/>)
