@@ -92,7 +92,7 @@ r3.render(myelem)*/
 
  //importing CSS
 
- import './index.css';
+ /*import './index.css';
 
  const App=()=>{
   return(
@@ -103,4 +103,77 @@ r3.render(myelem)*/
  }
  const r1=ReactDOM.createRoot(document.getElementById('root'));
 
-  r1.render(<App/>)
+  r1.render(<App/>)*/
+
+  //Else if ladder
+
+  /*const GradeSystem=()=>{
+    let grade=85;
+    const studentmark=prompt("Enter the Your marks");
+    if(studentmark>=90)
+    {
+      alert("A grade");
+    }
+    else if(studentmark>=70)
+    {
+       alert("B grade");
+    }
+    else if(studentmark>=60)
+    {
+       alert("C grade");
+    }
+    else
+    {
+       alert("D grade");
+    }
+    return(
+      <div>
+        <h1>Grade System</h1>
+        <p>Grade is {grade}</p>
+      </div>
+     
+    )
+  }
+  const r1=ReactDOM.createRoot(document.getElementById('root'))
+  r1.render(<GradeSystem/>)*/
+
+  //Switch Statement
+
+  const  SwitchStatement=()=>{
+    let day="Monday";
+    switch(day){
+      case "Monday":
+        alert("Today is Monday");
+        break;
+        case "Tuesday":
+          alert("Today is Tuesday");
+          break;
+          case "Wednesday":
+            alert("Today is Wednesday");
+            break;
+            case "Thursday":
+              alert("Today is Thursday");
+              break;
+              case "Friday":
+                alert("Today is Friday");
+                break;
+                case "Saturday":
+                  alert("Today is Saturday");
+                  break;
+                  case "Sunday":
+                    alert("Today is Sunday");
+                    break;
+                    default:
+                      alert("Invalid day");
+                      }
+                      return(
+                        <div>
+                          <h1>Switch Statement</h1>
+                          <p>Today is {day}</p>
+                        </div>
+                        )
+                        }
+                        const r2=ReactDOM.createRoot(document.getElementById('root'))
+                        r2.render(<SwitchStatement/>)
+                     
+          
