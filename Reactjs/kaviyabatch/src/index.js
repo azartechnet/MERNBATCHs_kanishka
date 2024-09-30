@@ -419,7 +419,7 @@ r1.render(<Goal isGoal={Math.random()>0.5}/>)*/
 
 //React List using Map
 
-function Car(props)
+/*function Car(props)
 {
   return<li>I am {props.b1}</li>
 }
@@ -434,4 +434,79 @@ function Garage()
    )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Garage/>)
+r1.render(<Garage/>)*/
+
+//React List using For Loop
+/*function Car(props) {
+  return <li>I am {props.b1}</li>;
+}
+
+function Garage() {
+  const cars = ["BMW", "Audi", "Toyota"];
+  return (
+    <ul>
+      {cars.map((car, index) => (
+        <Car key={index} b1={car} />
+      ))}
+    </ul>
+  );
+}
+
+const r1 = ReactDOM.createRoot(document.getElementById('root'));
+r1.render(<Garage />);*/
+
+//React keys
+
+/*function Car(props)
+{
+   return<li>I am a {props.brand} as {props.key}</li>
+}
+function Garage()
+{
+  const cars=[
+    {id:1,brand:'Ford'},
+    {id:2,brand:'BMW'},
+    {id:3,brand:'Audi'}
+  ];
+  return(
+    <ul>
+      {cars.map((car)=><Car key={car.id} brand={car.brand}/>)
+      }
+    </ul>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Garage/>)*/
+
+//getDerivedStateFromProps is invoked right before calling the render method, 
+//both on the initial mount and on subsequent updates.
+
+//React getDerivedStateFromProps
+
+class Header extends React.Component
+{
+   constructor(props)
+   {
+    super(props);
+    this.state={count:0};
+   }
+   static getDerivedStateFromProps(props,state)
+   {
+    console.log('getDerivedStateFromProps called');
+    return{count:props.c1}
+   }
+   render()
+   {
+      return(
+        <div>
+            <h1>Header</h1>
+            <p>Count:{this.state.count}</p>
+        </div>
+      )
+   }
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Header c1="100"/>)
+
+  
