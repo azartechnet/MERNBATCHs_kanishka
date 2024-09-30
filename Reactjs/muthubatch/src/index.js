@@ -139,7 +139,7 @@ r3.render(myelem)*/
 
   //Switch Statement
 
-  const  SwitchStatement=()=>{
+  /*const  SwitchStatement=()=>{
     let day="Monday";
     switch(day){
       case "Monday":
@@ -174,6 +174,85 @@ r3.render(myelem)*/
                         )
                         }
                         const r2=ReactDOM.createRoot(document.getElementById('root'))
-                        r2.render(<SwitchStatement/>)
+                        r2.render(<SwitchStatement/>)*/
+
+  //Class Component
+
+  /*class Sample extends React.Component
+  {
+     render()
+     {
+      return(
+        <div>
+          <h1>Welcome</h1>
+        </div>
+      )
+     }
+  }
                      
+  const r2=ReactDOM.createRoot(document.getElementById('root'))
+  r2.render(<Sample/>)*/
+
+  //Function Compoentent
+
+  /*function Sample(props)
+  {
+     return(
+       <div>
+        <h1>Welcome</h1>
+        <h1>{props.name}</h1>
+        <h2>{props.age}</h2>
+       </div>
+     )
+  }
+  const r2=ReactDOM.createRoot(document.getElementById('root'))
+  r2.render(<Sample name="azar" age="34"/>)*/
+
+  //Component in Component
+
+  /*function  Sample()
+  {
+    return(
+      <div>
+        <h1>Welcome</h1>
+      </div>
+    )
+  }
+  function  Sample2() 
+  {
+    return(
+      <div>
+         <h1>Hello</h1>
+         <Sample/>
+      </div>
+      )
+  }
+
+   const r2=ReactDOM.createRoot(document.getElementById('root'))
+   r2.render(<Sample2/>)*/
+
+   //Component Constructor
+
+   class Sample extends React.Component
+   {
+    constructor(props)
+    {
+      super(props)
+      this.state={name:"azar",age:34}
+    }
+    render()
+    {
+      return(
+        <div>
+            <h1>Welcome</h1>
+             <h1>{this.state.name}</h1>
+             <h2>{this.state.age}</h2>
+
+        </div>
+      )
+    }
+   }
+   const r2=ReactDOM.createRoot(document.getElementById('root'))
+   r2.render(<Sample/>)
+
           
