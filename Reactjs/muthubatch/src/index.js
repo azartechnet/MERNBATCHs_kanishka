@@ -233,7 +233,7 @@ r3.render(myelem)*/
 
    //Component Constructor
 
-   class Sample extends React.Component
+   /*class Sample extends React.Component
    {
     constructor(props)
     {
@@ -253,6 +253,110 @@ r3.render(myelem)*/
     }
    }
    const r2=ReactDOM.createRoot(document.getElementById('root'))
-   r2.render(<Sample/>)
+   r2.render(<Sample/>)*/
 
+   //constructor using props
+
+   /*class Sample extends React.Component
+   {
+    constructor(props)
+    {
+      super(props);
+      this.state={f1:'green'}
+    }
+    render()
+    {
+      return(
+        <div>
+          <h1>Welcome</h1>
+          <h1>{this.props.f2}</h1>
+          <h2>{this.state.f1}</h2>
+        </div>
+      )
+    }
+   }
+
+   const r2=ReactDOM.createRoot(document.getElementById('root'))
+    r2.render(<Sample f2="blue"/>)*/
+
+    //Changing the state objecct
+
+/*class Sample extends React.Component
+{
+  constructor(props)
+  {
+     super(props);
+     this.state = {
+       emp:{
+          id:1002,
+          name:"azar",
+          city:"Lahore"
+       },
+       showData:false
+  };
+}
+showdata(){
+  this.setState({showData:true });
+}
+ hideData(){
+   this.setState({showData:false});
+ }
+  render()
+   {
+     let data ;
+      if (this.state.showData== true) 
+      {
+         data= <div><b>City :</b>{this.state.emp.city}<b>Id::</b>{this.state.emp.id}<br/>
+           <button onClick={this.hideData.bind(this)} >Hide Data</button></div>;
+      }
+      else
+       {
+         data= <button onClick={this.showdata.bind(this)} >Show Data</button>;
+          }
+            return (
+               <div className="App">
+                <h1>Employee Details </h1>
+                 {data}
+              </div>
+              );
+               }
+};
+
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample /> )*/
+
+//React Event
+
+/*function Football()
+{
+   const shoot=()=>{
+    alert("Goal")
+   }
+   return(
+    <div>
+      <button onClick={shoot}>Shoot</button>
+    </div>
+   )
+}
+const r1=ReactDOM.createRoot(document.getElementById("root"))
+r1.render(<Football/>)*/
+
+//Events
+
+function Football()
+{
+    const shoot=(a)=>{
+      alert("Goal"+a)
+    }
+    return(
+      <div>
+        <button onClick={()=>shoot(10)}>Shoot</button>
+      </div>
+    )
+}
+ 
+const r1=ReactDOM.createRoot(document.getElementById("root"))
+r1.render(<Football/>)
+     
           
