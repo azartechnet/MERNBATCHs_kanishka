@@ -459,7 +459,7 @@ r1.render(<Garage />);*/
 
 /*function Car(props)
 {
-   return<li>I am a {props.brand} as {props.key}</li>
+   return<li>I am a {props.brand} as {props.k}</li>
 }
 function Garage()
 {
@@ -470,7 +470,7 @@ function Garage()
   ];
   return(
     <ul>
-      {cars.map((car)=><Car key={car.id} brand={car.brand}/>)
+      {cars.map((car)=><Car k={car.id} brand={car.brand}/>)
       }
     </ul>
   )
@@ -483,7 +483,7 @@ r1.render(<Garage/>)*/
 
 //React getDerivedStateFromProps
 
-class Header extends React.Component
+/*class Header extends React.Component
 {
    constructor(props)
    {
@@ -507,6 +507,108 @@ class Header extends React.Component
 }
 
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Header c1="100"/>)
+r1.render(<Header c1="100"/>)*/
 
+//ComponentDidMount
+
+//The componentDidMount method in react is used to execute some code immediately
+ //after mounting. This is a lifecycle method in React 
+//class component that is called only once when the component is mounted in the DOM.
+
+
+/*class Header extends  React.Component
+{
+  constructor(props)
+  {
+    super(props);
+    this.state={favcolor:"red"};
+  }
+  componentDidMount()
+  {
+      setTimeout(()=>{
+        this.setState({favcolor:"blue"});
+      },1000)
+
+  }
+  render()
+  {
+    return(
+
+       <div>
+        <h1>Header</h1>
+        <p>My fav color is {this.state.favcolor}</p>
+       </div>
+    )
+  }
+}
   
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Header/>)*/
+
+//updating getDerivedStateFromProps(props)
+
+/*class Header extends React.Component
+{
+   constructor(props)
+   {
+    super(props);
+      this.state={favcolor:"red"};
+   }
+   static getDerivedStateFromProps(props, state)
+   {
+     
+      console.log("getDerivedStateFromProps called");
+   }
+    
+   changeColor=()=>{
+    this.setState({favcolor:"blue"});
+   }
+   render()
+   {
+      return(
+         <div>
+           <h1>Header</h1>
+           <p>My fav color is {this.state.favcolor}</p>
+
+          <button  onClick={this.changeColor}>Change Color</button>
+
+         </div>
+      )
+   }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Header/>)*/
+
+//shouldComponentUpdate
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { favcolor: "red" };
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log("ShouldComponentUpdate");
+    // Return true if the component should update, false otherwise
+    // In this case, you can decide to always allow the update
+    return nextState.favcolor !== this.state.favcolor;
+  }
+
+  changeColor = () => {
+    this.setState({ favcolor: "blue" });
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>Header</h1>
+        <p>My fav color is {this.state.favcolor}</p>
+        <button type="button" onClick={this.changeColor}>
+          Change Color
+        </button>
+      </div>
+    );
+  }
+}
+
+const r1 = ReactDOM.createRoot(document.getElementById("root"));
+r1.render(<Header />);
