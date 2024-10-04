@@ -1,4 +1,4 @@
-import React from 'react';
+import {React,useState,useEffect} from 'react';
 import ReactDOM from 'react-dom/client';
 
 //Basic Rendering
@@ -580,7 +580,7 @@ const r1=ReactDOM.createRoot(document.getElementById('root'))
 r1.render(<Header/>)*/
 
 //shouldComponentUpdate
-class Header extends React.Component {
+/*class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = { favcolor: "red" };
@@ -611,4 +611,44 @@ class Header extends React.Component {
 }
 
 const r1 = ReactDOM.createRoot(document.getElementById("root"));
-r1.render(<Header />);
+r1.render(<Header />);*/
+
+//Hooks useState()
+
+/*function Counter()
+{
+   const [count,setCount]=useState(10);
+   const [name,setName]=useState("mohamed")
+   return(
+    <div>
+      <p>Count is {count}</p>
+      <button onClick={()=>setCount(count+1)}>Increment</button>
+      <button onClick={()=>setCount(count-1)}>Decrement</button>
+      <h1>Name:{name}</h1>
+       <button onClick={()=>setName("Ahmed")}>Change Name</button>
+    </div>
+   )
+}
+
+const r1 = ReactDOM.createRoot(document.getElementById("root"));
+r1.render(<Counter/>);*/
+
+//React useEffect
+
+function ClickCounter()
+{
+  const [count,setCount]=useState(0)
+  useEffect(()=>{
+
+    document.title=`You Clicked ${count} times`
+},[count])
+return(
+  <div>
+    <p>Count is {count}</p>
+    <button onClick={()=>setCount(count+1)}>Click Me</button>
+  </div>
+)
+}
+const r1 = ReactDOM.createRoot(document.getElementById("root"));
+r1.render(<ClickCounter/>)
+
