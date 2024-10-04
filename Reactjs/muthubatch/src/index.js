@@ -344,7 +344,7 @@ r1.render(<Football/>)*/
 
 //Events
 
-function Football()
+/*function Football()
 {
     const shoot=(a)=>{
       alert("Goal"+a)
@@ -357,6 +357,75 @@ function Football()
 }
  
 const r1=ReactDOM.createRoot(document.getElementById("root"))
-r1.render(<Football/>)
-     
+r1.render(<Football/>)*/
+
+//Conditional Rendering
+
+/*function MissedGoal()
+{
+   return<h1>MISSED</h1>
+}
+function MadeGoal()
+{
+   return<h1>GOAL</h1>
+}
+function Goal(props)
+{
+   const isGoal=props.isGoal;
+   if(isGoal)
+   {
+    return MadeGoal();
+   }
+   else
+   {
+      return MissedGoal();
+   }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'));
+r1.render(<Goal isGoal={Math.random()>0.5}/>)*/
+
+//React list
+/*function Car(props)
+{
+  return<li>I am a {props.b1}</li>
+}
+function Garage()
+{
+   const cars=["BMW","Volvo","Toyota"];
+   return(
+    <div>
+       <h1>My Garage</h1>
+       <ul>
+        {cars.map((car)=><Car b1={car}/>)}
+       </ul>
+    </div>
+   )
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Garage/>)*/
+
+//Reacr Form
+
+function  MyForm()
+{
+   return(
+    <form>
+      <label>UserName</label>
+      <input type="text" name="username"/>
+      <br/>
+      <br/>
+      <label>Password</label>
+      <input type="password"/>
+      <br/>
+      <br/>
+      <input type="submit" value="Submit"/>
+    </form>
+   )
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'));
+r1.render(<MyForm/>)
+ 
+
           
