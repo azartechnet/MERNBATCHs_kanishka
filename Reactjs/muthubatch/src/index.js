@@ -407,7 +407,7 @@ r1.render(<Garage/>)*/
 
 //Reacr Form
 
-function  MyForm()
+/*function  MyForm()
 {
    return(
     <form>
@@ -425,7 +425,99 @@ function  MyForm()
 }
 
 const r1=ReactDOM.createRoot(document.getElementById('root'));
-r1.render(<MyForm/>)
- 
+r1.render(<MyForm/>)*/
 
-          
+//React getDerivedStateFromProps
+//getDerivedStateFromProps is invoked right before calling the render method, 
+//both on the initial mount and on subsequent updates.
+/*class Header extends React.Component
+{
+   constructor(props)
+   {
+    super(props);
+    this.state={favcolor:"red"}
+   }
+   static getDerivedStateFromProps(props,state)
+   {
+    console.log("getDerivedStateFromProps called");
+   }
+   render()
+   {
+     return(
+      <div>
+        <h1>Header</h1>
+        <h2>Favorite Color is {this.state.favcolor}</h2>
+      </div>
+     )
+   }
+}
+ 
+ const r1=ReactDOM.createRoot(document.getElementById('root'));
+ r1.render(<Header/>)*/
+
+//ComponentDidMount
+
+//The componentDidMount method in react is used to execute some code immediately
+ //after mounting. This is a lifecycle method in React 
+//class component that is called only once when the component is mounted in the DOM.
+
+/*class Header extends React.Component
+{
+  constructor(props)
+  {
+     super(props);
+     this.state={favcolor:"red"}
+  }
+  componentDidMount()
+  {
+     setTimeout(()=>{
+      this.setState({favcolor:"blue"})
+     },3000)
+  }
+   render()
+   {
+    return(
+        <div>
+          <h1>Header</h1>
+          <p>{this.state.favcolor}</p>  
+        </div>
+    )
+   }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Header/>)*/
+
+//updating getDerivedStateFromProps(props)
+
+class Header extends React.Component
+{
+   constructor(props)
+   {
+    super(props);
+      this.state={favcolor:"red"};
+   }
+   static getDerivedStateFromProps(props, state)
+   {
+     
+      console.log("getDerivedStateFromProps called");
+   }
+    
+   changeColor=()=>{
+    this.setState({favcolor:"blue"});
+   }
+   render()
+   {
+      return(
+         <div>
+           <h1>Header</h1>
+           <p>My fav color is {this.state.favcolor}</p>
+
+          <button  onClick={this.changeColor}>Change Color</button>
+
+         </div>
+      )
+   }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Header/>)
+
