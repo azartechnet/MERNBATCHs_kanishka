@@ -523,7 +523,7 @@ r1.render(<Header/>)*/
 
 //ShouldComponetUpdate
 
-class Header extends React.Component
+/*class Header extends React.Component
 {
   constructor(props)
   {
@@ -553,5 +553,68 @@ class Header extends React.Component
   }
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Header/>)
+r1.render(<Header/>)*/
 
+//React Hooks useState()
+
+import { useState,useEffect } from 'react';
+
+/*function Counter()
+{
+   const[count,setCount]=useState(10)
+   const[name,setName]=useState("mohamed")
+   return(
+    <div>
+    <h1>Counter</h1>
+     <p>Count is {count}</p>
+     <button onClick={()=>setCount(count+1)}>Increment</button>
+     <button onClick={()=>setCount(count-1)}>Decrement</button>
+     <p>Name is {name}</p>
+     <button onClick={()=>setName("Ahmed")}>Change Name</button>
+     </div>
+   )
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Counter/>)*/
+
+//React useEffect
+
+/*function Timer()
+{
+    const[count,setCount]=useState(0)
+    useEffect(()=>{
+      setTimeout(()=>{
+        setCount(count+1)
+      },5000)
+    })
+    return(
+       <div>
+        <h1>Timer</h1>
+        <p>Count is {count}</p>
+       </div>
+    )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+ r1.render(<Timer/>)*/
+
+ //React useEffect
+
+ function ClickCounter()
+ {
+   const[count,setCount]=useState(0)
+   useEffect(()=>{
+    document.title="You clicked "+count+" times"
+   },[count])
+
+    return(
+       
+      <div>
+        <h1>Click Counter</h1>
+        <p>Count is {count}</p>
+        <button onClick={()=>setCount(count+1)}>Click me</button>
+      </div>
+    )
+ }
+ const r1=ReactDOM.createRoot(document.getElementById('root'))
+  r1.render(<ClickCounter/>)
