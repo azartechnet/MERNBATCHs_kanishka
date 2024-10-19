@@ -644,7 +644,7 @@ const r1=ReactDOM.createRoot(document.getElementById('root'))
 
   //React with useContext
 
-  import { createContext,useContext } from 'react';
+  /*import { createContext,useContext } from 'react';
   const UserContext=createContext();
   function Component1()
   {
@@ -665,6 +665,30 @@ const r1=ReactDOM.createRoot(document.getElementById('root'))
           <h1>{user}</h1>
        </>
     )
+  }
+  const r1=ReactDOM.createRoot(document.getElementById('root'))
+  r1.render(<Component1/>)*/
+
+  //UseRef
+  import { useRef } from 'react';
+  function Component1()
+  {
+    const inputRef=useRef(null);
+    const handleSubmit=(e)=>
+      {
+        e.preventDefault();
+        console.log(inputRef.current.value);
+        }
+        return(
+          <>
+           <form onSubmit={handleSubmit}>
+            <input type="text" ref={inputRef}/>
+
+            <button type="submit">Submit</button>
+           </form>
+           
+          </>
+        )
   }
   const r1=ReactDOM.createRoot(document.getElementById('root'))
   r1.render(<Component1/>)
