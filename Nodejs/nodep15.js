@@ -1,0 +1,5 @@
+var fs=require('fs')
+var rs=fs.createReadStream('file1.txt')
+var ws=fs.createWriteStream('file3.txt')
+rs.pipe(ws)
+console.log("Copy...")
