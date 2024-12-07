@@ -7,4 +7,4 @@ e2.on("id1",(msg)=>{
     console.log(msg)
 })
 //emitting event
-e2.emit("id1","hello")
+e2.emit("id1","hello")node
