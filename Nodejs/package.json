@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "cookie-parser": "^1.4.7",
     "express": "^4.21.2",
     "http": "^0.0.1-security",
     "mongodb": "^6.11.0",
